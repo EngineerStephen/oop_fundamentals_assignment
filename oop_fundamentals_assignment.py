@@ -25,3 +25,64 @@ print(f'This {vehicle.type} with registration no. {vehicle.reg} now belongs to {
 print()
 Tamar_vehicle  = Vehicle("AS 1542 E", "Volkswagon", "Tamar")
 print(f'This {vehicle.type} with registration no. {vehicle.reg} now belongs to {Tamar_vehicle.owner}')
+
+
+def add_participant():
+    people = []
+    while True:
+        print()
+        add_name = input("Please add a name to be added:   ")
+        people.append(add_name)
+        print(add_name, "has been added")
+        print()
+        add_more = input("Would you like to add more people to the list? y/n: ")
+        if add_more == "y":
+            continue
+        else: 
+            break
+    return people
+
+new_list = add_participant()
+print()
+print("Your newlist is:  ")
+
+for person in new_list:
+    print(person)
+    
+    
+    
+    
+    
+    
+#  Use the existing Event class by adding an attribute to keep track of the number of participants.
+# Implement a method add_participant that increases the count 
+# and a method get_participant_count to retrieve the current count.
+
+class Event:
+    
+    def __init__(self, name, date):
+            self.name = name
+            self.date = date
+            
+            
+    def add_participant():
+        people = []
+        while True:
+            print()
+            add_name = input("Please add a name to be added:   ")
+            people.append(add_name)
+            print(add_name, "has been added")
+            print()
+            add_more = input("Would you like to add more people to the list? y/n: ")
+            if add_more == "y":
+                continue
+            else: 
+                break
+        return people
+    
+    new_list = add_participant()
+    print()
+    print("Your newlist is:  ")
+    
+    for person in new_list:
+        print(person)
